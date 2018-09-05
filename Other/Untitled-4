@@ -1,0 +1,56 @@
+
+\newcommand\@maketitlepage{
+\begin{titlepage}
+    \renewcommand\baselinestretch{\@singlespacing}
+    \ColumnSave
+    \begin {center}
+        \leavevmode\vfil
+        \@titlesize{\@title} \\ \bigskip
+        \normalsize By \\ \bigskip
+        \textsc{\@author} \\
+        \@authordegrees \\ \bigskip
+        \textsc{\@Thesisname} \\ \bigskip
+        Submitted in partial satisfaction of the requirements
+        for the degree of \\ \bigskip
+        \textsc{\@degreename} \\ \bigskip
+        in \\ \bigskip
+        \@officialmajor \\ \bigskip
+        in the \\ \bigskip
+        \textsc{Office of Graduate Studies} \\ \bigskip
+        of the \\ \bigskip
+        \textsc{University of California} \\ \bigskip
+        \textsc{Davis} \\ \bigskip\bigskip
+        Approved: \\ \vspace{18pt}
+        \rule{3in}{1pt} \\
+        Chair \textrm{\@memberone}\\ \vspace{18pt}
+        \rule{3in}{1pt} \\
+        \textrm{\@membertwo}\\ \vspace{18pt}
+        \rule{3in}{1pt} \\ \medskip
+        \textrm{\@memberthree}\\ \bigskip
+        Committee in Charge \\ \bigskip
+        \@degreeyear \\
+        \vfil
+    \end {center}
+    \ColumnRestore
+\end{titlepage}
+}
+
+
+\def\@title{NO TITLE!?!}
+\def\@author{NO AUTHOR!?!}
+\def\@authordegrees{NO DEGREES!?!}
+\def\@memberone{ }\def\@membertwo{ }\def\@memberthree{ }
+\def\@titlesize{\large}
+\renewcommand{\title}[1]{\def\@title{#1}}
+\renewcommand{\author}[1]{\def\@author{#1}}
+\newcommand{\titlesize}[1]{\def\@titlesize{#1}}
+\newcommand{\authordegrees}[1]{\def\@authordegrees{#1}}
+\newcommand{\committee}[3]{\def\@memberone{#1}\def\@membertwo{#2}\def\@memberthree{#3}}
+
+
+\begin{center}
+\normalsize \normalfont Copyright \copyright\
+\2018 by \\
+\Niketkumar Balvantbhai Mistry \\
+\emph{\@copyrightinfo}
+\end{center}
